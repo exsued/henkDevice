@@ -5,7 +5,7 @@
 int port = 8888;  //Port number
 WiFiServer server(port);
 
-#include "MySSIDAndPassword"
+#include "MySSIDAndPassword.h"
 
 const char* ssid  = STASSID;
 const char* password = STAPSK;
@@ -58,7 +58,7 @@ void loop() {
          Serial.println("Ошибка считывания");
          return;
        }
-       client.print(t);
+       client.println(t);
        Serial.print("Влажность: ");
        Serial.print(h);
        Serial.print(" %\t");
